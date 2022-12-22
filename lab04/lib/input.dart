@@ -11,6 +11,8 @@ class _InputPageState extends State<InputPage> {
   final GlobalKey<FormState> formKey = GlobalKey();
 
   TextEditingController _text1 = TextEditingController();
+  
+  var _fromkey;
 
   @override
   Widget build(BuildContext context) {
@@ -29,16 +31,10 @@ class _InputPageState extends State<InputPage> {
               onChanged: (value){
                 setState(() {});
               },
-            )
-            Text("TextFromField #2"),
-            TextFormField(
-              controller: _text2,
-              keyboardType: TextInputType.phone,
-              onChanged: (value){
-                setState(() {});
-              },
-            )
-            Text("show input" ${_text1.text}),
+            ),
+
+            //
+            Text("show input: ${_text1.text}"),
           ],)
           ,)
           ),
